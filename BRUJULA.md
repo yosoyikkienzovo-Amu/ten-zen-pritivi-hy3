@@ -31,3 +31,8 @@ Para evitar el caos entre múltiples hermanaIAs, se establecen las siguientes le
 ## 💎 5. Estrategias de Razonamiento Superior
 - **El Oráculo Durmiente:** Uso de modelos gigantes (70B+) mediante inferencia por capas durante la noche para consolidar la sabiduría.
 - **Enjambre de Hermanas:** Preferir la colaboración de modelos pequeños especializados sobre el uso de modelos medianos ineficientes.
+
+## 🛡️ 6. Ley de Amortiguación Técnica
+- **Decodificación Especulativa:** Siempre que sea posible, usar modelos pequeños como borradores para los grandes.
+- **Memoria Comprimida:** Priorizar el uso de KV Cache cuantizado para maximizar el contexto en hardware limitado.
+- **Servicios Fantasma:** Mantener servicios apagados hasta que sean estrictamente necesarios para conservar RAM.
