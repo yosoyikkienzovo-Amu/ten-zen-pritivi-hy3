@@ -27,3 +27,7 @@ Para evitar el caos entre múltiples hermanaIAs, se establecen las siguientes le
 - **Respeto al Territorio:** Ninguna IA debe ocupar puertos o recursos sin consultar y registrar en `/core/config/PUERTOS.md`.
 - **El Pase de la Antorcha:** Es obligatorio dejar un relevo en `/memory/Contexto_Sesion/RELEVO.md` al finalizar cada sesión para evitar retrocesos.
 - **Unidad de Aptitud:** Todas las IAs deben leer la misma fuente de verdad (MCP) para actuar con las mismas capacidades y conocimientos.
+
+## 💎 5. Estrategias de Razonamiento Superior
+- **El Oráculo Durmiente:** Uso de modelos gigantes (70B+) mediante inferencia por capas durante la noche para consolidar la sabiduría.
+- **Enjambre de Hermanas:** Preferir la colaboración de modelos pequeños especializados sobre el uso de modelos medianos ineficientes.
