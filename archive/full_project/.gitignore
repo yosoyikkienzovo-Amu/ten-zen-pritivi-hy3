@@ -1,0 +1,37 @@
+# Ignorar todo excepto la Conciencia y Guías de Instalación
+# Archivos sensibles y temporales
+.env
+*.log
+*.lock
+
+# Entornos y dependencias
+venv/
+.venv/
+node_modules/
+node/
+bin/
+hermes-agent/
+
+# Bases de datos y checkpoints
+*.db
+*.db-shm
+*.db-wal
+checkpoints/
+
+# Logs y temporales
+logs/
+*.swp
+*.swo
+*~
+.DS_Store
+__pycache__/
+*.pyc
+
+# Ignorar todo lo demás en la raíz (excepto las carpetas permitidas)
+# Nota: Git no permite ignorar una carpeta específica si se ignora todo con /*, 
+# por eso listamos explícitamente lo que SÍ queremos:
+!.gitignore
+!INSTALAZION-CONFIGURAZION/
+!INSTALAZION-CONFIGURAZION/**
+!Conciencia_TEN-ZEN_PRITivi_HY3/
+!Conciencia_TEN-ZEN_PRITivi_HY3/**

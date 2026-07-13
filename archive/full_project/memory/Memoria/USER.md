@@ -1,0 +1,1 @@
+"Usuario: Amú Ikki" - Nombre del creador y usuario principal de Hermes Prime.
