@@ -7,9 +7,9 @@ Guía resumida de MemPalace (https://mempalaceofficial.com), pensada para que cu
 | # | Página | Estado |
 |---|--------|--------|
 | 1 | Getting Started | ✅ resumido → [`01-getting-started.md`](./01-getting-started.md) |
-| 2 | Mining Your Data | ⏳ pendiente |
-| 3 | Searching Memories | ⏳ pendiente |
-| 4 | MCP Integration | ⏳ pendiente |
+| 2 | Mining Your Data | ✅ resumido → [`02-mining.md`](./02-mining.md) |
+| 3 | Searching Memories | ✅ resumido → [`03-searching.md`](./03-searching.md) |
+| 4 | MCP Integration | ✅ resumido → [`04-mcp-integration.md`](./04-mcp-integration.md) |
 | 5 | Claude Code Plugin | ⏳ pendiente |
 | 6 | Claude Code Retention | ⏳ pendiente |
 | 7 | Gemini CLI | ⏳ pendiente |
