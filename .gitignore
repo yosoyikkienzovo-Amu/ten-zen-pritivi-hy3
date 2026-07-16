@@ -36,3 +36,7 @@ __pycache__/
 !Conciencia_TEN-ZEN_PRITivi_HY3/
 !Conciencia_TEN-ZEN_PRITivi_HY3/**
 secrets/
+
+# MemPalace per-project files (issue #185)
+mempalace.yaml
+entities.json
