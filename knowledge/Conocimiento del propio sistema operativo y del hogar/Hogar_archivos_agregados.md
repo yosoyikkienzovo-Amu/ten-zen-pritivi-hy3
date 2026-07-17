@@ -334,3 +334,96 @@ Cada entrada seguirá este patrón:
 /home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db
 /home/ikki/.var/app/com.github.marktext.marktext/config/marktext/preferences.json
 /home/ikki/.var/app/com.github.marktext.marktext/config/marktext/logs/20267/main.log
+## [2026-07-16 21:49:18] Escaneo de archivos del hogar (no estándar)
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Network Persistent State
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Crashpad/client_id
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Crashpad/settings.dat
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Dictionaries/en-US-10-1.bdic
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Dictionaries/es-ES-3-0.bdic
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/dataCenter.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/1383b3ce-7bab-48c1-847d-a2101fbd62e3_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/e99f7612-6003-4713-aa64-f4224a334272_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/0a067517-4703-4108-84ab-d52393c07d18_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/CURRENT
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOG.old
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/MANIFEST-000001
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOCK
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/000003.log
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOG
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_3
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_2
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_0
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_1
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DIPS-wal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DIPS
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Trust Tokens-journal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Preferences
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db-journal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/cache/index-dir/the-real-index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/cache/index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/preferences.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/logs/20267/main.log
+## [2026-07-16 21:49:42] Escaneo de archivos del hogar (no estándar)
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Network Persistent State
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Crashpad/client_id
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Crashpad/settings.dat
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Dictionaries/en-US-10-1.bdic
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Dictionaries/es-ES-3-0.bdic
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/dataCenter.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/1383b3ce-7bab-48c1-847d-a2101fbd62e3_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/e99f7612-6003-4713-aa64-f4224a334272_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/0a067517-4703-4108-84ab-d52393c07d18_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/CURRENT
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOG.old
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/MANIFEST-000001
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOCK
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/000003.log
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOG
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_3
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_2
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_0
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_1
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DIPS-wal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DIPS
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Trust Tokens-journal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Preferences
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db-journal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/cache/index-dir/the-real-index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/cache/index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/preferences.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/logs/20267/main.log
+## [2026-07-16 22:03:31] Escaneo de archivos del hogar (no estándar)
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Network Persistent State
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Crashpad/client_id
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Crashpad/settings.dat
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Dictionaries/en-US-10-1.bdic
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Dictionaries/es-ES-3-0.bdic
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/dataCenter.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/1383b3ce-7bab-48c1-847d-a2101fbd62e3_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/e99f7612-6003-4713-aa64-f4224a334272_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/editorStates/0a067517-4703-4108-84ab-d52393c07d18_editor_buffer_store.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/CURRENT
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOG.old
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/MANIFEST-000001
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOCK
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/000003.log
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Session Storage/LOG
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_3
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_2
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_0
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DawnWebGPUCache/data_1
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DIPS-wal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/DIPS
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Trust Tokens-journal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Preferences
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db-journal
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/cache/index-dir/the-real-index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/cache/index
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/Shared Dictionary/db
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/preferences.json
+/home/ikki/.var/app/com.github.marktext.marktext/config/marktext/logs/20267/main.log

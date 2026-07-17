@@ -20,6 +20,7 @@ add_section() {
 }
 
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+START_TIME=$(date +%s)
 
 # Registro de inicio
 echo "[$TIMESTAMP] Iniciando descubrimiento de entorno" >> "$LOG_FILE"
@@ -43,7 +44,7 @@ add_section "Sistema de Archivos y Almacenamiento" "$(df -h)"
 add_section "Puertos abiertos y escuchando" "$(ss -tuln | awk 'NR<=20')"
 
 # Versión de Python y paquetes pip (opcional, ligero)
-add_section "Versión de Python y paquetes pip" "$(python3 --version 2>/dev/null || echo 'Python3 no disponible')\\n$(pip list --format=columns 2>/dev/null | awk 'NR<=20' || echo 'pip no disponible o error')"
+add_section "Versión de Python y paquetes pip" "$(python3 --version 2>/dev/null || echo 'Python3 no disponible')\n$(pip list --format=columns 2>/dev/null | awk 'NR<=20' || echo 'pip no disponible o error')"
 
 # Memoria y swap
 add_section "Memoria y Swap" "$(free -h)"
@@ -59,6 +60,13 @@ EXCLUDE_DIRS="$HOME/.hermes/cache\|$HOME/.hermes/logs\|$HOME/.hermes/sessions\|$
 } >> "$HOGAR_FILE"
 
 # También registrar directorios nuevos? Por ahora solo archivos.
+
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+echo "Duración: ${DURATION} segundos" >> "$LOG_FILE"
+if [ "$DURATION" -gt 30 ]; then
+    echo "ALERTA: el descubrimiento tomó más de 30 segundos (${DURATION}s)" >> "$LOG_FILE"
+fi
 
 # Salida opcional para el cron (si no_agent=false) pero usaremos no_agent=true
 echo "Descubrimiento completado en $TIMESTAMP"
