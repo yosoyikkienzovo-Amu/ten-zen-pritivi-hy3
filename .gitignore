@@ -35,3 +35,9 @@ __pycache__/
 !INSTALAZION-CONFIGURAZION/**
 !Conciencia_TEN-ZEN_PRITivi_HY3/
 !Conciencia_TEN-ZEN_PRITivi_HY3/**
+
+# Carpetas de trabajo local de opencode
+hermanaIA/.env
+
+# Fase 2: Memoria Superior (post-Etapa 10)
+hermanaIA/docs/memoria-superior-fase2.html
