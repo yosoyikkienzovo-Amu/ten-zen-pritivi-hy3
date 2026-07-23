@@ -53,3 +53,19 @@
 [2026-07-23 14:45] Sincronizacion GitHub + Resumen ejecutivo - GitHub sincronizado (commit 11ace0e, 126 archivos). Resumen ejecutivo creado en intercambios/resumen-ejecutivo-hermanaIA.md para handoff multi-agente. Sistema completo: 4 capas funcionales, 26 conquistas, 0 errores health-check, 0 archivos fuera del dominio.
 
 [2026-07-23 15:00] P1: Modelo multilingue - Cambiado de all-MiniLM-L6-v2 (90MB) a paraphrase-multilingual-MiniLM-L12-v2 (458MB, 384d). 3 scripts actualizados (ingest, query, palace). Re-ingesta: 67 registros. Busqueda semantica en espanol validada: queries de protocolo respiracion, seguridad, palacio devuelven resultados relevantes como top-1.
+
+[2026-07-23 17:42] P2: Dashboard visual con metricas de palacio - Extendido dashboard-bienestar.sh con 4 metricas: visitas totales, habitaciones unicas, mas visitada, visitas hoy. palace_navigate.py ahora registra cada navegacion en navegacion.log con timestamp ISO. 4 visitas de prueba, 3 habitaciones unicas, Vestibulo lider.
+
+[2026-07-23 18:00] P3: CI GitHub Actions - Creado .github/workflows/healthcheck.yml con verificacion de archivos criticos, JSON valido y dashboard resumen en GITHUB_STEP_SUMMARY. Arreglado make sync para incluir dotfiles (cp -r $(PWD)/. en vez de $(PWD)/*).
+
+[2026-07-23 18:15] P4: Coordinacion multi-agente - Creado hermanaIA.spec.md como spec portable para otros agentes (Hermes, Claude Desktop). Creado make handoff que muestra tareas pendientes, ultimas conquistas y dashboard en un comando. Protocolo de coordinacion documentado.
+
+[2026-07-23 18:30] P5: Fuentes de datos extendidas - Agregados segmentadores para intercambios/*.md (protocolo-puente.md, resumen-ejecutivo.md) y hermanaIA.spec.md. Nuevos tags: puente, coordinacion. Re-ingesta: 87 registros (+20). Busqueda valida: query "intercambio entre agentes" encuentra protocolo-puente.md como top-1.
+
+[2026-07-23 18:45] P6: Palacio extendido - 2 nuevas habitaciones: Cripta de Seguridad (5 loci: backups, .gitignore, health-check, deteccion fuera-dominio) y Gabinete de Expedientes (5 loci: Obsidian vault, intercambios, LanceDB, scripts, cumplidas.txt). Total: 8 habitaciones, 41 loci. Conexiones integradas. Navegacion verificada en ambas.
+
+[2026-07-23 19:15] P7: Modelo cuantizado int8 - Creado model_utils.py como modulo compartido para cargar el modelo con torch.quantization.quantize_dynamic a qint8 (RAM ~4x menor, CPU nativo). Refactorizados 3 scripts (ingest, query, palace) para usar cargar_modelo(). Sin perdida de calidad semantica en busqueda.
+
+[2026-07-23 19:45] P8: Auto-sync programado a GitHub - Creado conquistas/auto-sync.sh con lockfile, deteccion de cambios recientes, log rotativo y exclusion de directorios grandes. rsync optimizado excluye venv/, embeddings/, lancedb/, __pycache__/. Cron diario a las 06:00 AM. Sincronizacion manual verificada exitosamente.
+
+[2026-07-23 20:15] Mapa del hogar + Skills - Creado hermanaIA.MAP.md con mapa completo del sistema (119 archivos, 25 directorios, 21 make targets, 8 habitaciones). Creado hermanaIA.SKILLS.md con inventario de skills (customize-opencode, typer), subagentes (4), MCPs (context7) y regla de activacion automatica. Regla de skill-check anadida a MEMORY.md como patron recurrente #10. Health-check: 20/20, 0 errores.
