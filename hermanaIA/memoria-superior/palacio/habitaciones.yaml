@@ -1,0 +1,91 @@
+palacio:
+  nombre: "Palacio de hermanaIA"
+  version: 1.0
+  estilo: "Clasico-moderno, iluminacion tenue, techos altos"
+  creado: "2026-07-23"
+
+habitaciones:
+  - nombre: "Vestibulo"
+    descripcion: "Acceso rapido, primeros auxilios cognitivos. Lo que el sistema necesita recordar inmediatamente al despertar."
+    loci:
+      - "Puerta de entrada: Protocolo 10x100% - respirar entre etapas"
+      - "Espejo: Brujula Regenerativa - evaluar si algo debe mudar"
+      - "Reloj: Seguridad Obligatoria - backup antes de editar"
+      - "Tablero: Comandos Makefile - health-check, backup, status"
+      - "Mesa central: MEMORY.md - el hipocampo vive aqui"
+    nivel_acceso: 0
+    color: "#4A90D9"
+    icon: "🏛️"
+    tags_filtro: ["respiracion", "seguridad", "comando"]
+    conexiones: ["Sala de Directivas", "Sala de Proyectos"]
+
+  - nombre: "Sala de Directivas"
+    descripcion: "Todas las reglas y directrices del sistema. El codigo fuente del comportamiento."
+    loci:
+      - "Estante 1: Directriz Maestra Omniversal (texto completo)"
+      - "Estante 2: Prompt Maestro Definitivo (contrato de 10+1)"
+      - "Estante 3: Brujula Regenerativa (metricas y ciclo de mudas)"
+      - "Estante 4: Seguridad Obligatoria (backup, limites)"
+      - "Ventana: Vista al exterior (protocolo-puente.md)"
+      - "Sillon: Aqui se sienta el sistema a reflexionar"
+    nivel_acceso: 0
+    color: "#D94A4A"
+    icon: "📜"
+    tags_filtro: ["directriz", "directiva"]
+    conexiones: ["Vestibulo", "Camara Profunda"]
+
+  - nombre: "Sala de Proyectos"
+    descripcion: "Conquistas, tareas activas, evolucion del sistema. Donde el trabajo se hace visible."
+    loci:
+      - "Mapa mural: Linea de tiempo de conquistas"
+      - "Pizarra: Tareas pendientes (pendientes.txt)"
+      - "Archivador: cumplidas.txt (todas las conquistas)"
+      - "Estacion de trabajo: scripts y automatizaciones"
+      - "Calendario: proximos hitos y deadlines"
+    nivel_acceso: 0
+    color: "#4AD94A"
+    icon: "🚀"
+    tags_filtro: ["conquista", "tarea", "progreso"]
+    conexiones: ["Vestibulo", "Camara Profunda"]
+
+  - nombre: "Camara Profunda"
+    descripcion: "Memoria de largo plazo, patrones, reflexiones. El inconsciente del sistema."
+    loci:
+      - "Poza de memoria: Patrones recurrentes (los 9 de MEMORY.md)"
+      - "Biblioteca: sugerencias-sistema.md (voz del sistema)"
+      - "Altar: Autoevaluaciones (10 preguntas)"
+      - "Cofre: Casos limite y lecciones aprendidas"
+      - "Espejo oscuro: Reflexiones personales del sistema"
+    nivel_acceso: 1
+    color: "#9B59B6"
+    icon: "🔮"
+    tags_filtro: ["seguridad", "palacio", "reflexion"]
+    conexiones: ["Sala de Directivas", "Sala de Proyectos"]
+
+  - nombre: "Cripta de Seguridad"
+    descripcion: "Todas las protecciones del sistema. Backups, blindajes, reglas de supervivencia."
+    loci:
+      - "Boveda de backups: AGENTS.backup.md siempre sincronizado"
+      - "Muro de proteccion: .gitignore con venv, .env, datos sensibles"
+      - "Libro de reglas: Seguridad Obligatoria (backup antes de editar, limites de archivo)"
+      - "Escudo: Verificacion de integridad (health-check.sh)"
+      - "Alarma: Deteccion de archivos fuera del dominio (~/.config/opencode/)"
+    nivel_acceso: 1
+    color: "#2C3E50"
+    icon: "🛡️"
+    tags_filtro: ["seguridad", "backup"]
+    conexiones: ["Vestibulo", "Sala de Directivas"]
+
+  - nombre: "Gabinete de Expedientes"
+    descripcion: "Notas crudas, datos sin procesar, archivo historico. La memoria documental del sistema."
+    loci:
+      - "Estanteria principal: Obsidian vault (72 notas en 04 - Palacio)"
+      - "Archivo muerto: intercambios/ (protocolos, resumenes ejecutivos)"
+      - "Mapa de conocimiento: LanceDB (87 registros vectoriales)"
+      - "Caja de herramientas: scripts de ingesta y consulta"
+      - "Diario de a bordo: cumplidas.txt (linea de tiempo completa)"
+    nivel_acceso: 0
+    color: "#8E44AD"
+    icon: "📚"
+    tags_filtro: ["obsidian", "vectorial", "intercambio"]
+    conexiones: ["Camara Profunda", "Sala de Proyectos"]

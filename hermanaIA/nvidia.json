@@ -1,0 +1,10 @@
+{
+  "provider": {
+    "nvidia": {
+      "options": {
+        "apiKey": "{env:NVIDIA_API_KEY}"
+      }
+    }
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b"
+}

@@ -1,0 +1,36 @@
+name: CI hermanaIA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verificar archivos críticos
+        run: |
+          ERRORS=0
+          for f in AGENTS.md MEMORY.md opencode.json; do
+            if [ -s "$f" ]; then echo "OK  $f"; else echo "FAIL $f"; ERRORS=$((ERRORS+1)); fi
+          done
+          for f in conquistas/pendientes.txt conquistas/cumplidas.txt conquistas/progreso.md conquistas/seguridad-casos-limite.md; do
+            if [ -s "$f" ]; then echo "OK  $f"; else echo "FAIL $f"; ERRORS=$((ERRORS+1)); fi
+          done
+          for s in scripts/ingest_to_lancedb.py scripts/query_lancedb.py scripts/sync_vault.py scripts/palace_navigate.py scripts/backup_vector.sh; do
+            if [ -f "memoria-superior/$s" ]; then echo "OK  memoria-superior/$s"; else echo "FAIL memoria-superior/$s"; ERRORS=$((ERRORS+1)); fi
+          done
+          if [ -f "memoria-superior/palacio/habitaciones.yaml" ]; then echo "OK  habitaciones.yaml"; else echo "FAIL habitaciones.yaml"; ERRORS=$((ERRORS+1)); fi
+          if python3 -c "import json; json.load(open('opencode.json'))" 2>/dev/null; then echo "OK  opencode.json (JSON válido)"; else echo "FAIL opencode.json (JSON inválido)"; ERRORS=$((ERRORS+1)); fi
+          echo "ERRORES: $ERRORS"
+          exit $ERRORS
+      - name: Dashboard resumen
+        run: |
+          echo "## Dashboard CI" >> $GITHUB_STEP_SUMMARY
+          echo "- Conquistas: $(grep -c '^\[' conquistas/cumplidas.txt 2>/dev/null || echo 0)" >> $GITHUB_STEP_SUMMARY
+          echo "- Pendientes: $(grep -c '^\[.*\] P[0-9]' conquistas/pendientes.txt 2>/dev/null || echo 0)" >> $GITHUB_STEP_SUMMARY
+          echo "- Realizados: $(grep -c '^\[.*\] ✅' conquistas/pendientes.txt 2>/dev/null || echo 0)" >> $GITHUB_STEP_SUMMARY
+          echo "- Notas Obsidian: $(find obsidian-vault -name '*.md' 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
