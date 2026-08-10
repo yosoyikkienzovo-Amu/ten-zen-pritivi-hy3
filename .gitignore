@@ -41,3 +41,8 @@ hermanaIA/.env
 
 # Fase 2: Memoria Superior (post-Etapa 10)
 hermanaIA/docs/memoria-superior-fase2.html
+secrets/
+
+# MemPalace per-project files (issue #185)
+mempalace.yaml
+entities.json

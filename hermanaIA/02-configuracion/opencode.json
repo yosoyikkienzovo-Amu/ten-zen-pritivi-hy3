@@ -1,0 +1,376 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "quick",
+  "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (offline only)",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "qwen3.5-4b": {
+          "name": "qwen3.5-4b"
+        },
+        "gemma4-coding": {
+          "name": "gemma4-coding"
+        }
+      }
+    },
+    "openrouter": {
+      "options": {
+        "apiKey": "{env:OPENROUTER_API_KEY}"
+      },
+      "models": {
+        "nvidia/nemotron-3-ultra-550b-a55b:free": {
+          "options": {
+            "temperature": 0.3
+          },
+          "variants": {
+            "fast": {
+              "temperature": 0.5
+            },
+            "thinking": {
+              "temperature": 0.3
+            }
+          }
+        },
+        "nvidia/nemotron-3-super-120b-a12b:free": {
+          "options": {
+            "temperature": 0.3
+          },
+          "variants": {
+            "fast": {
+              "temperature": 0.5
+            }
+          }
+        },
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+          "options": {
+            "temperature": 0.3
+          },
+          "variants": {
+            "reasoning": {
+              "temperature": 0.2
+            }
+          }
+        },
+        "nvidia/nemotron-nano-12b-v2-vl:free": {
+          "options": {
+            "temperature": 0.4
+          }
+        },
+        "nvidia/nemotron-nano-9b-v2:free": {
+          "options": {
+            "temperature": 0.4
+          }
+        },
+        "google/gemma-4-26b-a4b-it:free": {
+          "options": {
+            "temperature": 0.4
+          },
+          "variants": {
+            "fast": {
+              "temperature": 0.6
+            }
+          }
+        },
+        "google/gemma-4-31b-it:free": {
+          "options": {
+            "temperature": 0.4
+          }
+        },
+        "cohere/north-mini-code:free": {
+          "options": {
+            "temperature": 0.2
+          }
+        },
+        "poolside/laguna-s-2.1:free": {
+          "options": {
+            "temperature": 0.3
+          }
+        },
+        "inclusionai/ling-3.0-flash:free": {
+          "options": {
+            "temperature": 0.5
+          }
+        }
+      }
+    },
+    "anthropic": {
+      "options": {
+        "apiKey": "{env:ANTHROPIC_API_KEY}"
+      },
+      "models": {
+        "claude-sonnet-4-20250514": {
+          "options": {
+            "temperature": 0.3
+          },
+          "variants": {
+            "thinking": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 16000
+              }
+            }
+          }
+        }
+      }
+    },
+    "openai": {
+      "options": {
+        "apiKey": "{env:OPENAI_API_KEY}"
+      },
+      "models": {
+        "gpt-4o-mini": {
+          "options": {
+            "temperature": 0.7
+          }
+        }
+      }
+    }
+  },
+  "permission": {
+    "read": "allow",
+    "edit": "ask",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "bash": {
+      "git *": "allow",
+      "npm *": "allow",
+      "make *": "allow",
+      "python3 *": "allow",
+      "rm *": "deny",
+      "*": "ask"
+    },
+    "task": "allow",
+    "websearch": "allow",
+    "webfetch": "allow",
+    "skill": "allow",
+    "todowrite": "allow",
+    "question": "allow",
+    "write": "ask",
+    "patch": "ask",
+    "lsp": "allow",
+    "external_directory": "allow"
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "timeout": 30000
+    },
+    "websearch": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/websearch",
+      "enabled": true,
+      "timeout": 30000
+    },
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
+      "enabled": true,
+      "timeout": 30000
+    }
+  },
+  "references": {
+    "opencode": {
+      "repository": "anomalyco/opencode",
+      "branch": "dev",
+      "description": "OpenCode source code \u2014 consult for config structure, API, internals"
+    }
+  },
+  "instructions": [
+    "AGENTS.md",
+    "MEMORY.md"
+  ],
+  "skills": {
+    "paths": [
+      "~/.config/opencode/skills"
+    ]
+  },
+  "tools": {
+    "context7_*": false,
+    "gh_grep_*": false
+  },
+  "agent": {
+    "plan": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "build": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
+      }
+    },
+    "code": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "temperature": 0.2,
+      "color": "success"
+    },
+    "research": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "temperature": 0.3,
+      "color": "warning"
+    },
+    "quick": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "temperature": 0.3,
+      "color": "info"
+    },
+    "offline": {
+      "mode": "primary",
+      "model": "ollama/qwen3.5-4b",
+      "temperature": 0.3,
+      "color": "info"
+    },
+    "nemotron-super": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "temperature": 0.3,
+      "color": "warning"
+    },
+    "vision": {
+      "mode": "primary",
+      "model": "openrouter/nvidia/nemotron-nano-12b-v2-vl:free",
+      "temperature": 0.4,
+      "color": "success"
+    },
+    "sdd-cache": {
+      "description": "Cross-session HTTP cache for WebFetch with ETag revalidation.",
+      "mode": "subagent",
+      "hidden": true
+    },
+    "simplify-ignore": {
+      "description": "Protects annotated code blocks from simplification.",
+      "mode": "subagent",
+      "hidden": true
+    },
+    "security-auditor": {
+      "mode": "subagent",
+      "model": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "permission": {
+        "edit": "deny",
+        "bash": {
+          "*": "allow"
+        },
+        "read": "allow"
+      }
+    },
+    "code-engineer": {
+      "mode": "subagent",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "permission": {
+        "edit": "ask",
+        "bash": {
+          "pytest": "allow",
+          "black": "allow",
+          "isort": "allow",
+          "git *": "ask"
+        }
+      }
+    },
+    "memory-manager": {
+      "mode": "subagent",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "permission": {
+        "read": "allow",
+        "write": "allow"
+      }
+    },
+    "doc-writer": {
+      "mode": "subagent",
+      "model": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "permission": {
+        "edit": "allow",
+        "bash": "deny"
+      }
+    }
+  },
+  "tool_output": {
+    "max_lines": 100,
+    "max_bytes": 4096
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 25
+  },
+  "attachment": {
+    "image": {
+      "auto_resize": true,
+      "max_width": 2000,
+      "max_height": 2000,
+      "max_base64_bytes": 5242880
+    }
+  },
+  "experimental": {
+    "mcp_timeout": 60000,
+    "batch_tool": true,
+    "continue_loop_on_deny": true
+  },
+  "lsp": {
+    "typescript": {
+      "command": [
+        "typescript-language-server",
+        "--stdio"
+      ],
+      "env": {
+        "OPENSSL_CONF": ""
+      }
+    },
+    "pyright": {
+      "command": [
+        "pyright-langserver",
+        "--stdio"
+      ],
+      "env": {
+        "OPENSSL_CONF": ""
+      }
+    },
+    "eslint": {
+      "command": [
+        "node",
+        "/home/ikki/.local/lib/node_modules/eslint/bin/eslint.js",
+        "--stdio"
+      ],
+      "env": {
+        "OPENSSL_CONF": ""
+      }
+    }
+  },
+  "formatter": {
+    "prettier": {
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx",
+        ".html",
+        ".css",
+        ".md",
+        ".json",
+        ".yaml",
+        ".yml"
+      ]
+    },
+    "ruff": {
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
+    }
+  }
+}
