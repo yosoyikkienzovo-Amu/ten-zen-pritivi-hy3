@@ -1,0 +1,3 @@
+# desarrollo impulsado por fuentes
+
+Cada decisión de código específica del marco debe estar respaldada por documentación oficial.No lo implementes desde la memoria: verifica, cita y deja que el usuario vea tus fuentes.Los datos de entrenamiento se vuelven obsoletos, las API quedan obsoletas y las mejores prácticas evolucionan.Esta habilidad garantiza que el usuario obtenga un código en el que pueda confiar porque cada patrón se remonta a una fuente autorizada que puede verificar.

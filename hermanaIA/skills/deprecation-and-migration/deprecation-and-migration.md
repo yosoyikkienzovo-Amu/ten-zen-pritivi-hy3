@@ -1,0 +1,3 @@
+# desaprobación-y-migración
+
+El código es un pasivo, no un activo.Cada línea de código tiene un costo de mantenimiento continuo: errores que corregir, dependencias que actualizar, parches de seguridad que aplicar y nuevos ingenieros que incorporar.La obsolescencia es la disciplina de eliminar código que ya no merece su mantenimiento, y la migración es el proceso de trasladar a los usuarios de forma segura del antiguo al nuevo.

@@ -1,0 +1,54 @@
+¿Cuándo usar esta habilidad (browser-testing-with-devtools)?
+Usala cuando tu tarea involucre algo que se ejecuta en un navegador:
+
+Estés construyendo o modificando cualquier cosa que se renderice en un navegador (componentes UI, páginas web, apps SPA).
+
+Estés depurando problemas de UI: layout, estilos, interacciones rotas.
+
+Necesites diagnosticar errores o warnings de la consola del navegador.
+
+Quieras analizar peticiones de red (API calls, respuestas, CORS, payloads).
+
+Estés midiendo rendimiento (Core Web Vitals, LCP, CLS, INP, reflows).
+
+Quieras verificar visualmente que una corrección funciona (comparando capturas de pantalla).
+
+Estés haciendo pruebas automatizadas que requieran un navegador real.
+
+NO la uses para:
+
+Cambios solo de backend (API, base de datos, lógica de servidor).
+
+Herramientas de CLI (línea de comandos).
+
+Código que no corre en un navegador (Node.js sin HTML/CSS).
+
+Etiquetas (tags) que deberías poner
+Basado en el ejemplo (python, build, vlm), elige etiquetas cortas, en minúsculas y separadas por comas. Para esta habilidad, recomiendo:
+
+text
+browser, testing, devtools, ui, debugging, performance, frontend, web, automation, mcp, chrome
+Explicación de cada una:
+browser – ejecuta en navegador.
+
+testing – verifica comportamiento real.
+
+devtools – usa Chrome DevTools MCP.
+
+ui – interfaz de usuario.
+
+debugging – encuentra y arregla errores.
+
+performance – mide y optimiza.
+
+frontend – desarrollo frontend.
+
+web – aplicaciones web.
+
+automation – pruebas automáticas.
+
+mcp – usa el protocolo MCP.
+
+chrome – específico de Chrome.
+
+Puedes simplificar a browser, testing, devtools, frontend si quieres menos. Lo importante es que ayuden a encontrar esta habilidad cuando sea relevante.

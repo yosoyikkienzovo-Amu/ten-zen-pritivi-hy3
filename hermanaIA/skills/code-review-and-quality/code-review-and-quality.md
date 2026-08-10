@@ -1,0 +1,3 @@
+# revisión-y-calidad-de-código
+
+Revisión de código multidimensional con puertas de calidad.Cada cambio se revisa antes de la fusión, sin excepciones.La revisión cubre cinco ejes: corrección, legibilidad, arquitectura, seguridad y rendimiento.**El estándar de aprobación:** Apruebe un cambio cuando definitivamente mejore la salud general del código, incluso si no es perfecto.El código perfecto no existe: el objetivo es la mejora continua.No bloquees un cambio porque no es exactamente como lo habrías escrito.Si mejora el código base y sigue

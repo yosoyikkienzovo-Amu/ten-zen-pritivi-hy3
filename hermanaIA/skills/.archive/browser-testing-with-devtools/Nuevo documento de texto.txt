@@ -1,0 +1,23 @@
+Esta habilidad resuelve el problema de no poder ver qué ocurre realmente en el navegador cuando se construye o depura una aplicación web.
+
+Sin ella, el agente (o el desarrollador) solo tiene:
+
+Análisis de código estático (el HTML/CSS/JS en los archivos)
+
+Suposiciones sobre cómo se comporta la página en ejecución
+
+Necesidad de revisar manualmente el navegador para encontrar errores
+
+Con esta habilidad, el agente puede:
+
+Inspeccionar el DOM vivo (no el HTML original) y ver el estado real después de JavaScript, estilos aplicados, etc.
+
+Leer errores y warnings de consola que el usuario nunca teclea pero que indican bugs
+
+Ver peticiones de red fallidas, respuestas incorrectas, problemas de CORS o payloads erróneos
+
+Comparar capturas de pantalla antes/después de un cambio visual sin depender de "a simple vista"
+
+Medir rendimiento para detectar cuellos de botella que no se ven en el código
+
+En resumen: resuelve el problema de la falta de visibilidad del comportamiento real en tiempo de ejecución, convirtiendo la depuración web en un proceso verificable y automatizado por el agente, en lugar de adivinar o depender de revisión manual.

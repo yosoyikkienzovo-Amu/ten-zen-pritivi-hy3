@@ -1,0 +1,8 @@
+---
+name: personal-development
+description: "Esta habilidad crea un sistema estructurado para la interacción autodirigida con el agente Hermes, inspirándose en la arquitectura del agente Opencode."
+---
+
+# personal-development
+
+Esta habilidad crea un sistema estructurado para la interacción autodirigida con el agente Hermes, inspirándose en la arquitectura del agente Opencode.Establece:

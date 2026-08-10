@@ -1,0 +1,17 @@
+{
+  "name": "autoevolucion_bibliotecaria_estrategica",
+  "description": "Sistema de autoevolución que prioriza la reorganización metasistémica",
+  "version": "1.0",
+  "skills": [
+    "autoevolucion_bibliotecaria_estrategica"
+  ],
+  "configuration": {
+    "name": "autoevolucion_bibliotecaria_estrategica",
+    "description": "Skill suprema de autoevolución bibliotecaria estratégica",
+    "active": true,
+    "trigger": {
+      "type": "file_created",
+      "path": ".hermes/skills/autoevolucion_bibliotecaria_estrategica"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# ingeniería-ui-frontend
+
+Cree interfaces de usuario con calidad de producción que sean accesibles, eficaces y visualmente pulidas.El objetivo es una interfaz de usuario que parezca haber sido creada por un ingeniero consciente del diseño en una empresa importante, no como si hubiera sido generada por una IA.Esto significa adherencia real al sistema de diseño, accesibilidad adecuada, patrones de interacción bien pensados ​​y ninguna "estética de IA" genérica.

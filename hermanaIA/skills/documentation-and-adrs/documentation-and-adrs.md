@@ -1,0 +1,3 @@
+# documentación-y-adrs
+
+Documente las decisiones, no solo el código.La documentación más valiosa captura el *por qué*: el contexto, las limitaciones y las compensaciones que llevaron a una decisión.El código muestra *qué* se construyó;La documentación explica *por qué se construyó de esta manera* y *qué alternativas se consideraron*.Este contexto es esencial para los futuros humanos y agentes que trabajen en el código base.

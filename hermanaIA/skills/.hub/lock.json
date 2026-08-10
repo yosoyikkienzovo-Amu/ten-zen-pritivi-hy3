@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "installed": {
+    "adversarial-ux-test": {
+      "source": "official",
+      "identifier": "official/dogfood/adversarial-ux-test",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:41a2befba92ac381",
+      "install_path": "dogfood/adversarial-ux-test",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-19T18:25:31.499797+00:00",
+      "updated_at": "2026-05-19T18:25:31.499809+00:00"
+    },
+    "agentmail": {
+      "source": "official",
+      "identifier": "official/email/agentmail",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:0fa8c58e3e7d9a0c",
+      "install_path": "email/agentmail",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-19T18:25:44.170638+00:00",
+      "updated_at": "2026-05-19T18:25:44.170649+00:00"
+    },
+    "bioinformatics": {
+      "source": "official",
+      "identifier": "official/research/bioinformatics",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:36ae22f7783a3e17",
+      "install_path": "research/bioinformatics",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-19T18:26:46.874837+00:00",
+      "updated_at": "2026-05-19T18:26:46.874863+00:00"
+    },
+    "blackbox": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents/blackbox",
+      "trust_level": "builtin",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:0559dddaa9e3a4ce",
+      "install_path": "autonomous-ai-agents/blackbox",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-19T18:26:55.705851+00:00",
+      "updated_at": "2026-05-19T18:26:55.705863+00:00"
+    },
+    "blender-mcp": {
+      "source": "official",
+      "identifier": "official/creative/blender-mcp",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:6e0e3868200d8f41",
+      "install_path": "creative/blender-mcp",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-19T18:27:09.582263+00:00",
+      "updated_at": "2026-05-19T18:27:09.582275+00:00"
+    },
+    "canvas": {
+      "source": "official",
+      "identifier": "official/productivity/canvas",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:5d5076a6429fcec8",
+      "install_path": "productivity/canvas",
+      "files": [
+        "SKILL.md",
+        "scripts/canvas_api.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-19T18:27:17.377345+00:00",
+      "updated_at": "2026-05-19T18:27:17.377363+00:00"
+    },
+    "qmd": {
+      "source": "official",
+      "identifier": "official/research/qmd",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:ac5081bf93120fed",
+      "install_path": "research/qmd",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-07-15T12:09:24.633368+00:00",
+      "updated_at": "2026-07-15T12:09:24.633368+00:00"
+    }
+  }
+}

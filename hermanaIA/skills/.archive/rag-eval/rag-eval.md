@@ -1,0 +1,3 @@
+# evaluación de trapo
+
+Reemplace el bucle "retocar → entrecerrar los ojos → intercambiar modelo → quemar créditos" con un solo comando que ejecuta una cuadrícula de variantes de evaluación en el conjunto de oro del usuario, las clasifica según una puntuación que tenga en cuenta los costos y devuelve comentarios estructurados sobre la arquitectura, la pila y los posibles problemas.Se basa en prácticas RAG basadas en evidencia y aprende de las ejecuciones anteriores del usuario.

@@ -1,0 +1,59 @@
+¿Cuándo usar esta habilidad (security-and-hardening)?
+Úsala cuando tu tarea involucre seguridad o manejo de datos sensibles:
+
+Aceptes entrada de usuario (formularios, inputs, query params, uploads).
+
+Implementes autenticación o autorización (login, registro, roles, permisos).
+
+Almacenes o transmitas datos sensibles (contraseñas, tokens, PII, pagos).
+
+Integres con APIs o servicios externos (webhooks, callbacks, OAuth).
+
+Agregues subida de archivos (validar tipo/tamaño, sanitizar).
+
+Manejes pagos o información personal identificable (PII).
+
+Modifiques cabeceras de seguridad (CSP, CORS, HSTS) o configuración de sesiones.
+
+Ejecutes npm audit o equivalentes antes de cada release.
+
+NO la uses para:
+
+Cambios puramente estéticos o de UI sin interacción con datos.
+
+Documentación o comentarios.
+
+Refactorizaciones que no toquen seguridad.
+
+Etiquetas (tags) que deberías poner
+Basado en el ejemplo (python, build, vlm), elige etiquetas cortas, en minúsculas, separadas por comas. Para esta habilidad recomiendo:
+
+text
+security, hardening, authentication, authorization, input-validation, owasp, encryption, rate-limiting, secrets-management, web-security, backend, api
+Explicación de cada una (opcional para que entiendas el criterio):
+security – tema principal.
+
+hardening – nombre de la habilidad.
+
+authentication – login, sesiones, JWT, cookies.
+
+authorization – control de acceso por roles/permisos.
+
+input-validation – sanitización, schemas, zod.
+
+owasp – cubre los top 10.
+
+encryption – hashing de contraseñas, TLS.
+
+rate-limiting – protección contra abusos.
+
+secrets-management – variables de entorno, gitignore.
+
+web-security – headers, CORS, CSP.
+
+backend – típicamente aplicaciones del lado servidor.
+
+api – endpoints, integraciones externas.
+
+Si quieres un conjunto más reducido pero representativo:
+security, authentication, input-validation, owasp, backend

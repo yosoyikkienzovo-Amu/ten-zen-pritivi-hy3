@@ -1,0 +1,3 @@
+# entorno-descubrimiento-automatización
+
+Esta habilidad automatiza la recopilación de información del sistema (kernel, red, servicios, paquetes, disco, memoria, Python/pip) y archivos de inicio no estándar, almacenando cada ejecución con una marca de tiempo en archivos de conocimiento.También administra un trabajo cron para ejecutar la colección cada 6 horas, incluye recorte automatizado de archivos de conocimiento para evitar un crecimiento ilimitado, envía notificaciones de escritorio en ejecuciones largas y configura trabajos cron auxiliares para limpieza mensual, revisión de registros semanal y recordatorios de autoevaluación mensuales.

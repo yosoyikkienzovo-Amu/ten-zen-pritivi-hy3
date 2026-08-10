@@ -22,11 +22,11 @@ for f in pendientes.txt cumplidas.txt progreso.md seguridad-casos-limite.md; do
   else echo "FAIL conquistas/$f"; ERRORS=$((ERRORS+1)); fi
 done
 
-# 3. Backup coherente
-if diff -q "$DIR/AGENTS.md" "$DIR/AGENTS.backup.md" >/dev/null 2>&1; then
-  echo "OK  AGENTS.backup.md (coherente)"
+# 3. Backup coherente (BACKUP-EVOLUTIVO real)
+if diff -q "$DIR/AGENTS.md" "$DIR/_backup-configs-fantasma/BACKUP-EVOLUTIVO/AGENTS.md" >/dev/null 2>&1; then
+  echo "OK  BACKUP-EVOLUTIVO/AGENTS.md (coherente)"
 else
-  echo "FAIL AGENTS.backup.md (no coincide con AGENTS.md)"
+  echo "FAIL BACKUP-EVOLUTIVO/AGENTS.md (no coincide con AGENTS.md)"
   ERRORS=$((ERRORS+1))
 fi
 

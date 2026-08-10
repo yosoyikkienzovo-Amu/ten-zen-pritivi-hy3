@@ -1,0 +1,52 @@
+Úsala cuando:
+
+Existan requisitos de rendimiento en la especificación (presupuestos de tiempo de carga, SLAs de respuesta).
+
+Usuarios o monitoreo reporten lentitud (quejas reales o datos de RUM/APM).
+
+Las Core Web Vitals estén por debajo de los umbrales (LCP > 2.5s, INP > 200ms, CLS > 0.1).
+
+Sospeches que un cambio introdujo una regresión de rendimiento.
+
+Estés construyendo funcionalidades que manejan grandes volúmenes de datos o alto tráfico.
+
+Quieras medir antes de optimizar (para evitar optimización prematura).
+
+NO la uses para:
+
+Optimizar sin evidencia de un problema real (premature optimization).
+
+Cambios puramente funcionales sin impacto en rendimiento.
+
+Ajustes de rendimiento asumidos sin medir primero.
+
+Etiquetas (tags) que deberías poner
+Basado en el patrón de ejemplo (python, build, vlm), elige etiquetas cortas, en minúsculas, separadas por comas. Para esta habilidad recomiendo:
+
+text
+performance, optimization, core-web-vitals, frontend, backend, profiling, bundle-size, caching, web-vitals, speed, lcp, cls, inp
+Explicación (opcional):
+performance – tema principal.
+
+optimization – nombre de la habilidad.
+
+core-web-vitals – métricas clave (LCP, INP, CLS).
+
+frontend – optimizaciones del lado del cliente (bundle, imágenes, re-renders).
+
+backend – optimizaciones del servidor (consultas, caching).
+
+profiling – medir antes de optimizar (Lighthouse, DevTools, APM).
+
+bundle-size – control de tamaño del JavaScript/CSS.
+
+caching – estrategias de caché (HTTP, base de datos, memoria).
+
+web-vitals – librería de medición en producción.
+
+speed – término general de rendimiento.
+
+lcp, cls, inp – métricas específicas (útiles para búsquedas concretas).
+
+Si quieres un conjunto más reducido pero representativo:
+performance, optimization, core-web-vitals, frontend, backend, profiling

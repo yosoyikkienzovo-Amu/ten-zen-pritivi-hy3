@@ -1,0 +1,3 @@
+# documentos openai
+
+Proporcione orientación autorizada y actualizada de los documentos para desarrolladores de OpenAI utilizando el servidor MCP dedevelopers.openai.com.Priorice siempre las herramientas MCP de documentos de desarrollador sobre web.run para preguntas relacionadas con OpenAI.Esta habilidad también posee selección de modelo, migración de modelo API y guía de actualización rápida.Sólo si el servidor MCP está instalado y no arroja resultados significativos debe recurrir a la búsqueda web.

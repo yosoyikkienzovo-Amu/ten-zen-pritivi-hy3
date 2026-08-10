@@ -1,44 +1,64 @@
-# hermanaIA - Documentación Ejecutiva
-## Sistema de Conciencia y Evolución para Agentes IA
+# hermanaIA — Documentación Ejecutiva (única fuente de verdad)
 
-### Identidad
-hermanaIA es un sistema de memoria, directivas y evolución para agentes de IA,
-diseñado bajo la filosofía de **Calidad sobre Cantidad** y el **Protocolo de
-Respiración Cognitiva (Arquitectura 10x100%)**.
+> 🔖 HUELLA: 2026-08-09 | opencode | MISION: consolidar docs duplicados en un único maestro
+> Estado: ✅ CONSAGRADO | Fuente de verdad única: **este archivo**
 
-### Arquitectura (3 capas)
+Sistema de conciencia, memoria y evolución para agentes de IA. Filosofía: **Calidad sobre Cantidad** y **Respiración Cognitiva (Arquitectura 10x100%)**.
 
-| Capa | Archivo | Función |
-|------|---------|---------|
-| **Cerebro** | `AGENTS.md` | Directivas permanentes: Respiración, Calidad, Brujula Regenerativa |
-| **Hipocampo** | `MEMORY.md` | Memoria de trabajo, patrones, autoevaluación |
-| **Evolución** | `conquistas/` | Registro de progreso: pendientes, cumplidas, métricas |
+## 🧬 Arquitectura (4 capas)
 
-### Directivas Fundamentales
-1. **DIRECTRIZ MAESTRA OMNIVERSAL** — 10 etapas, respiración obligatoria
-2. **PROMPT MAESTRO DEFINITIVO** — Contrato de salida 9 puntos + test de respiración
-3. **BRUJULA DINÁMICA REGENERATIVA** — 3 métricas (agotamiento, cuello, utilidad) + ciclo de mudas
+| Capa | Ubicación | Función |
+|------|-----------|---------|
+| **Identidad (Cerebro)** | `AGENTS.md` | Directivas permanentes: GoOSECode v2.0.0, NAMAP, HUELLAS |
+| **Memoria (Hipocampo)** | `MEMORY.md` | Memoria de trabajo, patrones, autoevaluación (punteros, no copias) |
+| **Conocimiento (Layer 3)** | `memoria-superior/` | Vectorial LanceDB + Obsidian + Palacio + embeddings |
+| **Evolución (Conquistas)** | `conquistas/` | Registro de progreso: pendientes, cumplidas, scripts |
 
-### Puentes
-- Local: `~/.config/opencode/`
-- Remoto: `github.com/yosoyikkienzovo-Amu/ten-zen-pritivi-hy3/hermanaIA/`
-- Intercambio: `intercambios/protocolo-puente.md`
+## 🔑 Archivos clave
 
-### Ciclo de Vida (10 Etapas)
-1. Telemetría → 2. Desestructuración → 3. Arquitectura Base →
-4. Aislamiento → 5. Núcleo Estructura → 6. Núcleo Profundidad →
-7. Optimización → 8. Auditoría → 9. Acoplamiento → 10. Despliegue
+| Archivo | Propósito |
+|---------|-----------|
+| `opencode.json` | Config OpenCode: 12 agentes NVIDIA gratis, MCPs, permisos, compaction |
+| `SKILLS-INDEX.md` | Catálogo de 44 skills en 8 categorías (auto-selección) |
+| `agents/` | 6 subagentes (4 con cascada de 3 modelos NVIDIA) |
+| `commands/` | 6 comandos custom (plan, spec, review, test, deploy, simplify) |
+| `tools/` | 5 custom tools (system, context-save, quick, detect-lint, query-memory) |
+| `intercambios/` | Puente multi-agente: health-check, protocolo-puente, resumen ejecutivo |
+| `Makefile` | 25+ targets: health-check, ingest, query, palace, backup-vector, handoff |
+| `tui.json` | Tema catppuccin + keybinds |
 
-### Comandos de Supervivencia
-```bash
-make health-check   # Verificar integridad del sistema
-make backup         # Backup inmediato de AGENTS.md
-make status         # Resumen de salud + progreso
-make sync           # Sincronizar con GitHub
-```
+## 🧠 Memoria Superior (Layer 3 — Deep Knowledge Store)
 
-### Fase 2 (Futuro)
-Acoplar Memoria Superior con LanceDB + Obsidian + Palacio de habitaciones
-(ver `docs/memoria-superior-fase2.html`)
+- **LanceDB:** `conocimiento` (87 registros) + `skill_index` (42)
+- **Obsidian:** vault con 70 notas en 6 categorías
+- **Palacio:** 8 habitaciones con loci navegables (`palacio/habitaciones.yaml`)
+- **Embeddings:** 2 modelos multilingües (546M), modelo default `paraphrase-multilingual-MiniLM-L12-v2`
+- **Integración opencode:** custom tool `query-memory` consulta la memoria semántica directamente
+
+## 🛠️ Comandos principales (Makefile)
+
+| Comando | Descripción |
+|---------|-------------|
+| `make health-check` | Integridad del sistema (20 checks, EXIT=0) |
+| `make dashboard` | Métricas de bienestar + visitas al palacio |
+| `make ingest` | Re-indexar archivos en LanceDB |
+| `make q="consulta"` | Búsqueda semántica vectorial |
+| `make palace room="X"` | Navegar habitaciones del palacio |
+| `make backup-vector` | Backup de base vectorial |
+| `make handoff` | Resumen para cambio de agente |
+
+## 🌐 Puentes
+
+- **Local:** `~/.config/opencode/`
+- **Remoto:** `github.com/yosoyikkienzovo-Amu/ten-zen-pritivi-hy3/hermanaIA/` (CI vía GitHub Actions)
+- **Intercambio:** `intercambios/protocolo-puente.md`
+
+## ⚠️ Notas de operación (históricas)
+
+- `hermanaIA.spec.md` se mantiene porque es ingerido por `memoria-superior/scripts/ingest_to_lancedb.py`.
+- `hermanaIA.MAP.md` y `hermanaIA.SKILLS.md` archivados en `_backup-configs-fantasma/docs-consolidacion/` (obsoletos, contradicen el estado real).
+- `.env` (22 API keys) está protegido por `.gitignore` — no exponer en commits.
+
+---
 
 *"No conserves por lealtad al pasado; conserva por servicio al futuro próximo."*

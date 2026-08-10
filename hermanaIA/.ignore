@@ -1,0 +1,5 @@
+# Allow ripgrep to search inside git-ignored directories
+!node_modules/
+!dist/
+!build/
+!.git/

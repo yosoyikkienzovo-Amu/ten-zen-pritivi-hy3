@@ -1,7 +1,7 @@
 # Makefile - Automatización de supervivencia del sistema hermanaIA
 # Uso: make <comando>
 
-.PHONY: health-check backup sync-tree sync-file status check-stale dashboard breathe continue ingest query sync-vault palace palace-map palace-sync backup-vector restore-vector memory-status handoff auto-sync
+.PHONY: health-check backup sync-tree sync-file status check-stale dashboard breathe continue ingest query sync-vault palace palace-map palace-sync backup-vector restore-vector memory-status handoff auto-sync build-skill-index suggest-skill
 
 # Verificar integridad del sistema
 health-check:
@@ -25,6 +25,9 @@ sync:
 	  --exclude='venv/' --exclude='__pycache__/' --exclude='*.pyc' \
 	  --exclude='embeddings/' --exclude='lancedb/' --exclude='obsidian-vault/.obsidian/' \
 	  --exclude='.git/' --exclude='.env' --exclude='node_modules/' \
+	  --exclude='_backup-configs-fantasma/' --exclude='memoria-superior/venv/' \
+	  --exclude='memoria-superior/lancedb/' --exclude='memoria-superior/embeddings/' \
+	  --exclude='intercambios/*.log' --exclude='*.lock' \
 	  $(PWD)/ /tmp/ten-zen-pritivi-hy3/hermanaIA/ && \
 	cd /tmp/ten-zen-pritivi-hy3 && git add hermanaIA/ && \
 	git diff --cached --quiet || git commit -m "sync: hermanaIA $$(date +%Y-%m-%d-%H%M)" && \
@@ -124,3 +127,13 @@ handoff:
 # Auto-sync programado a GitHub (cron-safe)
 auto-sync:
 	bash conquistas/auto-sync.sh
+
+# === SKILL INDEX (Fase 3) ===
+
+# Construir/Reconstruir índice semántico de skills
+build-skill-index:
+	. $(VENV) && python3 $(MS_DIR)/scripts/build_skill_index.py
+
+# Sugerir skill por similitud semántica
+suggest-skill:
+	. $(VENV) && python3 $(MS_DIR)/scripts/suggest_skill.py "$(q)" $(if $(top),--top $(top)) $(if $(min),--min-score $(min)) $(if $(findstring yes,$(json)),--json)

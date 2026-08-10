@@ -1,0 +1,3 @@
+# depuración-y-recuperación-de-errores
+
+Depuración sistemática con clasificación estructurada.Cuando algo se rompa, deje de agregar funciones, conserve la evidencia y siga un proceso estructurado para encontrar y solucionar la causa raíz.Adivinar es una pérdida de tiempo.La lista de verificación de clasificación funciona para fallas de prueba, errores de compilación, errores de tiempo de ejecución e incidentes de producción.

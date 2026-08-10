@@ -1,0 +1,121 @@
+# ================================================================================
+# SKILL: think_deep — Razonamiento Profundo TTS
+# TEN-ZEN JIGOKURAKU
+# ================================================================================
+# Uso: TEN-ZEN invoca esta skill cuando detecta problemas complejos.
+# Patron: AgentTTS (Test-Time Compute Scaling) adaptado para LM Studio local.
+# ================================================================================
+
+name: think_deep
+description: |
+  Activa razonamiento profundo multi-paso usando LM Studio local.
+  Usar cuando: debug, analisis complejo, decisiones importantes, codigo critico.
+  NO usar para: chat casual, preguntas simples, creatividad ligera.
+
+  Trigger keywords: analiza, razona, piensa, debug, optimiza, complejo, profundo,
+  multiples pasos, investiga, compara alternativas, revisa codigo.
+
+triggers:
+  keywords:
+    - analiza
+    - razona
+    - piensa
+    - debug
+    - optimiza
+    - complejo
+    - profundo
+    - "multiples pasos"
+    - investiga
+    - "compara alternativas"
+    - "revisa codigo"
+    - "por que falla"
+    - "explica paso a paso"
+  regex:
+    - "(?i)(debug|analisis|razonamiento|investigacion|comparativa)"
+    - "(?i)(codigo complejo|algoritmo|arquitectura|diseno)"
+
+steps:
+  - name: "clasificar_intencion"
+    description: "Determinar si el problema merece TTS profundo o razonamiento estandar"
+    action: "llm_call"
+    model: "qwen2.5-0.5b-instruct@q8_0"
+    base_url: "http://192.168.1.174:1234/v1"
+    api_key: "sk-lm-kL39MrrX:rbNn6rcEx0mDpuqP5F1R"
+    prompt: |
+      Clasifica la complejidad de esta tarea en UNA palabra:
+      - SIMPLE: Pregunta directa, definicion, chat casual
+      - MODERADO: Explicacion, tutorial, analisis superficial
+      - PROFUNDO: Debug, optimizacion, arquitectura, decision critica
+
+      Tarea: {{user_input}}
+      Clasificacion:
+    output_var: "complejidad"
+
+  - name: "decidir_profundidad"
+    description: "Ajustar depth segun complejidad detectada"
+    action: "conditional"
+    condition: "{{complejidad}} == 'PROFUNDO'"
+    true_branch:
+      - set_var: "depth", 5
+      - set_var: "modelo", "deepseek/deepseek-r1-0528-qwen3-8b"
+    false_branch:
+      - set_var: "depth", 2
+      - set_var: "modelo", "qwen2.5-coder-14b-instruct"
+
+  - name: "invocar_tts"
+    description: "Llamar a LM Studio con razonamiento profundo"
+    action: "mcp_call"
+    server: "lmstudio_agent"
+    tool: "lmstudio_reason"
+    arguments:
+      task: "{{user_input}}"
+      depth: "{{depth}}"
+      model: "{{modelo}}"
+    output_var: "respuesta_tts"
+
+  - name: "verificar_calidad"
+    description: "Auto-evaluar si la respuesta TTS es suficiente"
+    action: "llm_call"
+    model: "qwen2.5-0.5b-instruct@q8_0"
+    base_url: "http://192.168.1.174:1234/v1"
+    api_key: "sk-lm-kL39MrrX:rbNn6rcEx0mDpuqP5F1R"
+    prompt: |
+      Evalua esta respuesta de razonamiento profundo:
+
+      {{respuesta_tts}}
+
+      Es completa, precisa y util? Responde SI o NO.
+    output_var: "calidad_ok"
+
+  - name: "fallback_si_necesario"
+    description: "Si la calidad no es suficiente, reintentar con mayor profundidad"
+    action: "conditional"
+    condition: "{{calidad_ok}} != 'SI'"
+    true_branch:
+      - action: "mcp_call"
+        server: "lmstudio_agent"
+        tool: "lmstudio_reason"
+        arguments:
+          task: "{{user_input}}"
+          depth: 7
+          model: "deepseek/deepseek-r1-0528-qwen3-8b"
+        output_var: "respuesta_tts"
+
+  - name: "entregar_respuesta"
+    description: "Presentar resultado final al usuario con metadatos"
+    action: "return"
+    value: |
+      RAZONAMIENTO PROFUNDO TTS — TEN-ZEN JIGOKURAKU
+
+      {{respuesta_tts}}
+
+      ---
+      "El esfuerzo y el premio suelen ir de la mano."
+      Modo: {{complejidad}} | Profundidad: {{depth}} | Modelo: {{modelo}}
+
+metadata:
+  author: "TEN-ZEN JIGOKURAKU"
+  version: "1.0.0"
+  requires_mcp: ["lmstudio_agent"]
+  estimated_cost: "0 tokens API (todo local)"
+  vram_requirement: "~6GB para deepseek-r1-qwen3-8b"

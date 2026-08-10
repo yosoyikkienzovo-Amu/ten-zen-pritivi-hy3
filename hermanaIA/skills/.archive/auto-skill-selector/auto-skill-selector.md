@@ -1,0 +1,1 @@
+Selecciona automáticamente la skill más adecuada para una tarea basada en similitud semántica usando embeddings y LanceDB.

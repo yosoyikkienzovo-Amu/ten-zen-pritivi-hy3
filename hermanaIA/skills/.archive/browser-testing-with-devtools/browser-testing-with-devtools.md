@@ -1,0 +1,3 @@
+# prueba-de-navegador-con-devtools
+
+Utilice Chrome DevTools MCP para que su agente pueda ver el navegador.Esto cierra la brecha entre el análisis de código estático y la ejecución en vivo del navegador: el agente puede ver lo que ve el usuario, inspeccionar el DOM, leer registros de la consola, analizar solicitudes de red y capturar datos de rendimiento.En lugar de adivinar lo que sucede en tiempo de ejecución, verifíquelo.

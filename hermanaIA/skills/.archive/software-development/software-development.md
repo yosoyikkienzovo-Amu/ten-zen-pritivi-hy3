@@ -1,0 +1,1 @@
+Tres herramientas, seleccionadas según la situación:
