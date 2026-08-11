@@ -1,7 +1,7 @@
 # Makefile - Automatización de supervivencia del sistema hermanaIA
 # Uso: make <comando>
 
-.PHONY: health-check backup sync-tree sync-file status check-stale dashboard breathe continue ingest query sync-vault palace palace-map palace-sync backup-vector restore-vector memory-status handoff auto-sync build-skill-index suggest-skill
+.PHONY: health-check backup sync-tree sync-file status check-stale dashboard breathe continue ingest query sync-vault palace palace-map palace-sync backup-vector restore-vector memory-status handoff auto-sync build-skill-index suggest-skill orient orient-diario
 
 # Verificar integridad del sistema
 health-check:
@@ -137,3 +137,14 @@ build-skill-index:
 # Sugerir skill por similitud semántica
 suggest-skill:
 	. $(VENV) && python3 $(MS_DIR)/scripts/suggest_skill.py "$(q)" $(if $(top),--top $(top)) $(if $(min),--min-score $(min)) $(if $(findstring yes,$(json)),--json)
+
+# === RITUAL DE ORIENTACIÓN (Doctrina de Enrutamiento) ===
+
+# Orientarse antes de una tarea significativa
+# Uso: make orient "contexto de la tarea actual"
+orient:
+	. $(VENV) && python3 $(MS_DIR)/scripts/route_memory.py "$(q)" $(if $(top),--top $(top)) $(if $(findstring yes,$(json)),--json)
+
+# Orientación automática diaria (deposita en MEMORY.md; cron 5:55)
+orient-diario:
+	bash conquistas/orientacion-diaria.sh
