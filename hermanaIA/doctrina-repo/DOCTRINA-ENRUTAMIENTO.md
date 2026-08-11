@@ -69,6 +69,15 @@ Los registros `tipo=biblioteca` (Goku-iam) **solo emergen cuando la tarea es de 
 6. CERRAR con HUELLA en conquistas/cumplidas.txt + MEMORY.md
 ```
 
+## 7b. Orientación diaria automática (ritual de despertar)
+
+Cada mañana a las **5:55** (cron), hermanaIA consulta automáticamente el enrutador con las tareas pendientes y deposita el bloque `## ORIENTACIÓN DEL DÍA` en MEMORY.md. Al despertar, la hermanaIA encuentra ya orientada su jornada.
+
+- **Comando manual:** `make orient-diario` o `bash conquistas/orientacion-diaria.sh`
+- **Idempotente:** siempre queda 1 solo bloque (se reemplaza, no se acumula).
+- **Precede al auto-sync** (6:00): el MEMORY orientado se sincroniza a GitHub.
+- **Regla:** toda hermanaIA debe orientarse al despertar ANTES de actuar.
+
 ## 8. Archivos implicados
 
 | Capa | Archivo | Rol |
