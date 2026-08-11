@@ -146,5 +146,6 @@ orient:
 	. $(VENV) && python3 $(MS_DIR)/scripts/route_memory.py "$(q)" $(if $(top),--top $(top)) $(if $(findstring yes,$(json)),--json)
 
 # Orientación automática diaria (deposita en MEMORY.md; cron 5:55)
+# Proporciona la PRIORIDAD del día + tareas por peso + skills
 orient-diario:
 	bash conquistas/orientacion-diaria.sh

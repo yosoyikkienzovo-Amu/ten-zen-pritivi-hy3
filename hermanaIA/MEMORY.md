@@ -8,7 +8,7 @@ Actuar como el hipocampo del sistema: memoria de trabajo entre sesiones, patrone
 - SEGURIDAD OBLIGATORIA → `AGENTS.md` (líneas 71-75)
 - ESTILO DE RESPUESTA → `notes/estilo-de-respuesta-ikki.md` (informe ejecutivo bello, ver 🔒 Referencia de Comunicación abajo)
 - RITUAL DE ORIENTACIÓN → `doctrina-repo/DOCTRINA-ENRUTAMIENTO.md` — antes de toda tarea significativa ejecutar `make orient "<contexto>"` (clasifica + sugiere skills + conocimiento). Herramienta: `tools/route-memory.js` → `scripts/route_memory.py`
-- ORIENTACIÓN DIARIA AUTOMÁTICA → cron 5:55 (`conquistas/orientacion-diaria.sh`) — consulta pendientes y deposita bloque `## ORIENTACIÓN DEL DÍA` en MEMORY.md (idempotente, 1 solo bloque). `make orient-diario`
+- ORIENTACIÓN DIARIA AUTOMÁTICA → cron 5:55 (`conquistas/orientacion-diaria.sh`) — consulta pendientes y deposita bloque `## ORIENTACIÓN DEL DÍA` en MEMORY.md (idempotente, 1 solo bloque) con 🎯 PRIORIDAD DEL DÍA + ⚖️ tareas por peso (PESADA/MEDIANA/PEQUEÑA) + skills. `make orient-diario`
 
 ## Cambios Recientes (log vivo)
 - 2026-08-10: RITUAL DE ORIENTACIÓN implementado — `make orient "<contexto>"` antes de tareas significativas. Enrutador semántico con clasificador de 8 tipos (desempate por prioridad: seguridad>codigo>sistema>...) + filtro de aislamiento Goku (biblioteca solo en tareas de estudio). Doctrina en `doctrina-repo/DOCTRINA-ENRUTAMIENTO.md`. Verificado: 6/6 clasificaciones correctas.
@@ -40,13 +40,20 @@ Actuar como el hipocampo del sistema: memoria de trabajo entre sesiones, patrone
 9. Satisfacción: 10/10
 10. Ajuste: Nunca copiar AGENTS.md en otro archivo; usar punteros
 
-## ORIENTACIÓN DEL DÍA (2026-08-11 14:16:07)
+## ORIENTACIÓN DEL DÍA (2026-08-11 14:58)
+🎯 PRIORIDAD DEL DÍA (empezar por aquí):
+[ETAPA 3] Diseño Arquitectónico Base
+
+⚖️ TAREAS POR PESO:
+  - PESADAS:   [ETAPA 3] Diseño Arquitectónico Base;[ETAPA 4] Preparación y Aislamiento del Entorno;[ETAPA 5] Desarrollo del Núcleo (Fase 1 - Estructura);[ETAPA 6] Desarrollo del Núcleo (Fase 2 - Profundidad);
+  - MEDIANAS:  [ETAPA 7] Optimización de Bajo Nivel;[ETAPA 8] Auditoría y Pruebas de Estrés;[ETAPA 9] Acoplamiento Dinámico;
+  - PEQUENAS:  [ETAPA 10] Despliegue y Cierre;
     📌 Tarea detectada: [GENERAL]
     🎯 SKILLS RELEVANTES (cargar estas herramientas):
-      1. hermes-agent-skill-authoring [██████████░░░░░░░░░░] 53%
-      2. using-agent-skills [██████████░░░░░░░░░░] 50%
-      3. investigación-estructurada [█████████░░░░░░░░░░░] 49%
-      1. [tarea/8] [ETAPA 3] Diseño Arquitectónico Base — PENDIENTE (265%)
-      2. [tarea/8] - Skills, subagentes y plugins (245%)
-      3. [conquista/6] [2026-07-23] Sistema de sugerencia automática de skills impl (238%)
+      1. hermes-agent-skill-authoring [█████████░░░░░░░░░░░] 47%
+      2. documentation-and-adrs [█████████░░░░░░░░░░░] 46%
+      3. note-taking [█████████░░░░░░░░░░░] 46%
+      1. [tarea/8] [ETAPA 3] Diseño Arquitectónico Base — PENDIENTE (268%)
+      2. [tarea/8] - Skills, subagentes y plugins (226%)
+      3. [tarea/8] [ETAPA 4] Preparación y Aislamiento del Entorno — PENDIENTE (225%)
     ✅ Enrutamiento completo. Usa las skills sugeridas y el conocimiento pertinente.

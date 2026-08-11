@@ -77,6 +77,8 @@ Cada mañana a las **5:55** (cron), hermanaIA consulta automáticamente el enrut
 - **Idempotente:** siempre queda 1 solo bloque (se reemplaza, no se acumula).
 - **Precede al auto-sync** (6:00): el MEMORY orientado se sincroniza a GitHub.
 - **Regla:** toda hermanaIA debe orientarse al despertar ANTES de actuar.
+- **Prioridad del día:** el bloque incluye 🎯 PRIORIDAD DEL DÍA (la tarea PESADA más temprana de `conquistas/pendientes.txt`) y ⚖️ las tareas por peso (PESADAS/MEDIANAS/PEQUEÑAS). Las tareas se etiquetan en `pendientes.txt` como `PENDIENTE [PESADA|MEDIANA|PEQUEÑA]`.
+- **Recordatorio:** si la jornada se alarga y no se abarcan todas las tareas, la orientación de la mañana siguiente vuelve a mostrar las pendientes por peso — nunca se pierde la vista del conjunto.
 
 ## 8. Archivos implicados
 

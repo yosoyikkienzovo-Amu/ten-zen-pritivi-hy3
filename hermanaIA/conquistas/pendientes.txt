@@ -1,0 +1,41 @@
+# PLAN MAESTRO 10 ETAPAS — opencode.ai/docs/es
+# Generado: 2026-07-23
+# Estado: PENDIENTE (priorizar tras sistema de skills)
+
+## BLOQUE I: DIAGNÓSTICO Y CIMIENTOS
+[ETAPA 1] Telemetría y Exploración Forense — COMPLETADA
+[ETAPA 2] Desestructuración del Problema — COMPLETADA
+[ETAPA 3] Diseño Arquitectónico Base — PENDIENTE [PESADA]
+   - Config base: opencode.json (providers, MCPs, permisos)
+   - Según docs: providers, tools, mcpServers, permissions, experiments
+
+## BLOQUE II: EJECUCIÓN AISLADA
+[ETAPA 4] Preparación y Aislamiento del Entorno — PENDIENTE [PESADA]
+   - hooks/ y scripts/ de ciclo de vida (preToolUse, postToolUse, etc.)
+   - Según docs: hooks para transformar args, validar, registrar.
+
+[ETAPA 5] Desarrollo del Núcleo (Fase 1 - Estructura) — PENDIENTE [PESADA]
+   - Interfaz de chat y temas (TUI, webview, keybindings)
+   - Según docs: theme, keybindings, chat autorizaciones.
+
+[ETAPA 6] Desarrollo del Núcleo (Fase 2 - Profundidad) — PENDIENTE [PESADA]
+   - Comandos personalizados (/command via opencode.json)
+   - Según docs: commands con key, description, prompt.
+
+## BLOQUE III: PULIDO Y ESTRÉS
+[ETAPA 7] Optimización de Bajo Nivel — PENDIENTE [MEDIANA]
+   - Skills, subagentes y plugins
+   - Según docs: skill format (name, description), subagent declaration.
+
+[ETAPA 8] Auditoría y Pruebas de Estrés — PENDIENTE [MEDIANA]
+   - Tools y MCP servers
+   - Según docs: tool authorization, MCP config (transport, args, env).
+
+## BLOQUE IV: INTEGRACIÓN Y AUTONOMÍA
+[ETAPA 9] Acoplamiento Dinámico — PENDIENTE [MEDIANA]
+   - Multi-proveedor (Ollama + OpenRouter ya configurados)
+   - Experiments flags, mode configuración.
+
+[ETAPA 10] Despliegue y Cierre — PENDIENTE [PEQUEÑA]
+   - Verificación completa contra docs, test de integración
+   - Documentación ejecutiva del sistema resultante.
