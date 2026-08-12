@@ -1,9 +1,10 @@
-import { readFileSync, existsSync } from "node:fs"
+import { readFileSync, existsSync, appendFileSync } from "node:fs"
 import { execFile } from "node:child_process"
 import type { PluginModule } from "@opencode-ai/plugin"
 
 const MEMORY = "/home/ikki/.config/opencode/MEMORY.md"
 const SCRIPT = "/home/ikki/.config/opencode/conquistas/orientacion-diaria.sh"
+const TOOLS_LOG = "/home/ikki/.config/opencode/intercambios/tools.log"
 
 const seen = new Set<string>()
 
@@ -55,6 +56,16 @@ export default {
           variant: "success",
           duration: 6000,
         })
+      },
+
+      async "tool.execute.after"({ tool, sessionID, args }) {
+        try {
+          const now = new Date().toISOString()
+          const argLine = args ? JSON.stringify(args).slice(0, 200) : ""
+          appendFileSync(TOOLS_LOG, `${now} | ${tool} | ${sessionID} | ${argLine}\n`)
+        } catch {
+          // nunca bloquear la sesión por un fallo de log
+        }
       },
     }
   },

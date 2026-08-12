@@ -14,11 +14,11 @@
    - Descartado: hooks en config (no existen en esquema V1)
 
 ## BLOQUE II: EJECUCIÓN AISLADA
-[ETAPA 4] Plugins de Ciclo de Vida — PENDIENTE [PESADA]
+[ETAPA 4] Plugins de Ciclo de Vida — COMPLETADA
    - plugins/ con hooks reales verificados: event (session.created), tool.execute.before/after,
      chat.message, permission.ask, shell.env, experimental.chat.system.transform
-   - En curso: orientacion-sesion.ts (orientación al abrir sesión, workaround session.created + dedupe)
-   - Según docs: packages/plugin/src/index.ts (PluginModule, Hooks)
+   - orientacion-sesion.ts: orientación al abrir sesión (session.created + dedupe) + tools.log
+   - Verificado en runtime: session.created dispara orientación, tool.execute.after registra uso
 
 [ETAPA 5] Interfaz y Comandos Personalizados — PENDIENTE [PESADA]
    - Comandos /command (opencode.json o .opencode/commands/*.md)
