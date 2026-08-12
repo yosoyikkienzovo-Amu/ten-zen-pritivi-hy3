@@ -1,41 +1,37 @@
-# PLAN MAESTRO 10 ETAPAS — opencode.ai/docs/es
-# Generado: 2026-07-23
+# PLAN MAESTRO 6 ETAPAS — opencode.ai/docs/es
+# Generado: 2026-07-23 | Reestructurado: 2026-08-11 (colapso 10→6, verificado contra opencode 1.18.3)
 # Estado: PENDIENTE (priorizar tras sistema de skills)
+# Nota: el plan original de 10 etapas se basó en docs que describían hooks estilo Claude Code
+# (preToolUse/postToolUse) que NO existen en opencode. Verificado en código fuente (config.ts,
+# plugin/index.ts): la automatización real vive en plugins (~/.config/opencode/plugins/).
 
 ## BLOQUE I: DIAGNÓSTICO Y CIMIENTOS
 [ETAPA 1] Telemetría y Exploración Forense — COMPLETADA
 [ETAPA 2] Desestructuración del Problema — COMPLETADA
 [ETAPA 3] Diseño Arquitectónico Base — COMPLETADA
    - Config base: opencode.json (providers, MCPs, permisos)
-   - Según docs: providers, tools, mcpServers, permissions, experiments
+   - Verificado: tools context7/gh_grep activadas, small_model, compaction.prune, subagent_depth
+   - Descartado: hooks en config (no existen en esquema V1)
 
 ## BLOQUE II: EJECUCIÓN AISLADA
-[ETAPA 4] Preparación y Aislamiento del Entorno — PENDIENTE [PESADA]
-   - hooks/ y scripts/ de ciclo de vida (preToolUse, postToolUse, etc.)
-   - Según docs: hooks para transformar args, validar, registrar.
+[ETAPA 4] Plugins de Ciclo de Vida — PENDIENTE [PESADA]
+   - plugins/ con hooks reales verificados: event (session.created), tool.execute.before/after,
+     chat.message, permission.ask, shell.env, experimental.chat.system.transform
+   - En curso: orientacion-sesion.ts (orientación al abrir sesión, workaround session.created + dedupe)
+   - Según docs: packages/plugin/src/index.ts (PluginModule, Hooks)
 
-[ETAPA 5] Desarrollo del Núcleo (Fase 1 - Estructura) — PENDIENTE [PESADA]
-   - Interfaz de chat y temas (TUI, webview, keybindings)
-   - Según docs: theme, keybindings, chat autorizaciones.
-
-[ETAPA 6] Desarrollo del Núcleo (Fase 2 - Profundidad) — PENDIENTE [PESADA]
-   - Comandos personalizados (/command via opencode.json)
-   - Según docs: commands con key, description, prompt.
+[ETAPA 5] Interfaz y Comandos Personalizados — PENDIENTE [PESADA]
+   - Comandos /command (opencode.json o .opencode/commands/*.md)
+   - TUI/themes/keybindings solo si aportan valor real (no decorativo)
+   - Según docs: command con key, description, prompt; agent mode primary/subagent
 
 ## BLOQUE III: PULIDO Y ESTRÉS
-[ETAPA 7] Optimización de Bajo Nivel — PENDIENTE [MEDIANA]
-   - Skills, subagentes y plugins
-   - Según docs: skill format (name, description), subagent declaration.
-
-[ETAPA 8] Auditoría y Pruebas de Estrés — PENDIENTE [MEDIANA]
-   - Tools y MCP servers
-   - Según docs: tool authorization, MCP config (transport, args, env).
+[ETAPA 6] Consolidación Skills/MCPs/Proveedores — PENDIENTE [MEDIANA]
+   - Skills (42 existentes), subagentes (6), MCPs (3), multi-proveedor (Ollama+OpenRouter)
+   - Auditoría: qué sirve se queda, qué no se reconfigura o se elimina
+   - Según docs: skill format (name, description), MCP config (transport, args, env)
 
 ## BLOQUE IV: INTEGRACIÓN Y AUTONOMÍA
-[ETAPA 9] Acoplamiento Dinámico — PENDIENTE [MEDIANA]
-   - Multi-proveedor (Ollama + OpenRouter ya configurados)
-   - Experiments flags, mode configuración.
-
-[ETAPA 10] Despliegue y Cierre — PENDIENTE [PEQUEÑA]
-   - Verificación completa contra docs, test de integración
-   - Documentación ejecutiva del sistema resultante.
+[ETAPA 7] Verificación Final y Cierre — PENDIENTE [PEQUEÑA]
+   - Health-check 0 errores, test de integración, documentación ejecutiva
+   - Backup evolutivo + conquistas + push master vía worktree

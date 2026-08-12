@@ -44,3 +44,8 @@ Para evitar el caos entre múltiples hermanaIAs, se establecen las siguientes le
 
 ## 💎 8. El Arsenal de Tesoros
 - **Tesoros de GitHub:** La soberanía se apoya en los hombros de gigantes. Consultar `/docs/TESOROS-GITHUB.md` para la selección maestra de herramientas que potencian este Templo.
+
+## 🛤️ 9. Regla de Publicación Git (rama mempalace-docs)
+- La rama local **`mempalace-docs`** es intencionalmente intocable (adelante 2 commits + cambios locales) — sirve como zona de trabajo protegida.
+- **TODAS las publicaciones a GitHub van vía worktree a `master`**: `git worktree add /tmp/... master` → copiar archivos → commit → push → `git worktree remove`.
+- No mezclar ramas; el flujo master es de un solo carril y siempre verificado con health-check antes de publicar.
