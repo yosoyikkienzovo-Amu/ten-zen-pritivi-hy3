@@ -124,3 +124,21 @@
 [2026-08-10] ANALISIS GOKU-IAM: 243 docs = 96% esoterico/espiritual/astrologico, 0 tecnologia. 10 candidatos practicos (Silva, Pranayama, respiracion, meditacion). Veredicto: no mezclar con conocimiento operativo, extraer solo tecnicas utiles.
 [2026-08-10] Limpieza: tus borrados core/memory consolidados en commit reversible 3ca50e0 (no perdidos).
 
+
+[2026-08-10] MASTER RAMA VIVA: auto-sync consolidado a master con excludes de seguridad (backups, venv, lancedb, embeddings, .env). 2 syncs verificados (58d1317, 7a9b3d0).
+[2026-08-10] ARBOL DESCRIPTIVO VERIFICADO: foto real de master (2165 archivos: hermanaIA 1586, Skills 549 con 91 SKILL.md/26 cats, docs 9, Mem Palace, Recordar). Commit 760e314 en master.
+[2026-08-10] AISLAMIENTO BIBLIOTECA: Goku-iam (243 docs) confirmado como archivo de estudio aislado - solo en LanceDB (385 regs), nunca en el repo operativo. Veredicto: 96% esoterico, 0 tecnologia.
+[2026-08-10] Cierre: doctrina colmena en doctrina-repo/, worktrees limpiados, health-check 0 errores.
+
+
+[2026-08-10] MEJORA AUTO-ELECCION: route_memory.py + route-memory.js creados. Enrutador semantico: clasifica tarea (codigo/doctrina/memoria/seguridad/biblioteca/automatizacion/sistema) y sugiere skills + conocimiento pertinente automaticamente. Aislamiento Goku: registros 'biblioteca' solo emergen en tareas de estudio (filtro en route_memory.py). Probado: doctrina NO trae Goku, biblioteca SI. build_skill_index regenerado (42 skills).
+
+[2026-08-10] RITUAL DE ORIENTACION COMPLETO: doctrina (v1.0) + make orient + clasificador con desempate (6/6 OK) + MEMORY.md + transmision 6 destinos + master 195cca5. Verificado: health-check 0 errores, memoria 385+42.
+
+[2026-08-11] ORIENTACION DIARIA AUTOMATICA: cron 5:55 + make orient-diario + orientacion-diaria.sh (consulta pendientes, deposita bloque idempotente en MEMORY.md). Verificado 3 ejecuciones = 1 bloque. Publicado master f74edf8.
+
+
+[2026-08-11] ORIENTACION CON PRIORIDAD DEL DÍA: orientacion-diaria.sh ahora clasifica pendientes por peso (PESADA/MEDIANA/PEQUEÑA via etiquetas [PESADA] en pendientes.txt) y deposita 🎯 PRIORIDAD DEL DÍA + ⚖️ tareas por peso + skills en MEMORY.md. Idempotente. Bug detectado: bash 5.2 NO soporta Ñ en nombres de variable (asignacion corrupta 'ÑAS') → variables ASCII. Publicado master a0411c6.
+
+
+[2026-08-11] ETAPA 3 DISEÑO ARQUITECTONICO BASE COMPLETADA: opencode.json endurecido con 4 cambios verificados contra esquema V1 (config.ts dev d47043474): (1) tools context7_*/gh_grep_* false->true (resuelve contradiccion con AGENTS.md §12; config.ts:553 confirma deny en runtime); (2) small_model=nemotron-nano-9b-v2:free (titles/summary baratos); (3) compaction.prune=true (recorta tool-outputs viejos); (4) subagent_depth=1 explicito. Descartado hooks (NO existen en esquema V1 - grep vacio). Backup opencode.json.bak-20260811-212104. Health-check 0 errores.

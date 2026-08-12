@@ -5,7 +5,7 @@
 ## BLOQUE I: DIAGNÓSTICO Y CIMIENTOS
 [ETAPA 1] Telemetría y Exploración Forense — COMPLETADA
 [ETAPA 2] Desestructuración del Problema — COMPLETADA
-[ETAPA 3] Diseño Arquitectónico Base — PENDIENTE [PESADA]
+[ETAPA 3] Diseño Arquitectónico Base — COMPLETADA
    - Config base: opencode.json (providers, MCPs, permisos)
    - Según docs: providers, tools, mcpServers, permissions, experiments
 
